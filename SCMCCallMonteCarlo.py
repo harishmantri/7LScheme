@@ -20,8 +20,7 @@ class SCMCCallMonteCarlo:
         for t in range(1, self.steps):
              #retrieving the interpolated values using Lagrage function
              Z = SCMC(self.r, self.sgm, self.simulations).calculateY()
-             #
-             #Z = random.standard_normal(self.simulations)
+             #Is  below correct way to implement the simulation?
              S[t] = S[t - 1] * exp((self.r - 0.5 * self.sgm ** 2) * dt + (self.sgm * sqrt(dt) * Z))
 
         plt.plot(linspace(0, self.T, self.steps), S, '-')
