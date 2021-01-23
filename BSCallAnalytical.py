@@ -16,3 +16,6 @@ class BSCallAnalytical:
         result = (self.S * si.norm.cdf(d1, 0.0, 1.0) - self.K *
                   np.exp(-self.r * self.T) * si.norm.cdf(d2, 0.0, 1.0))
         return result
+
+callOption = BSCallAnalytical(100, 120, 1, 0.2, 0.5)
+print(callOption.price())
