@@ -19,7 +19,6 @@ class SCMC:
         # Generate sample from X
         samplex = np.random.standard_normal(self.simulations)
         # interpolate the 1000 values
-        return lp.interpolate(samplex)
+        yy = lp.interpolate(samplex)
+        return yy
 
-#print(SCMC(0.05,0.03,1000).calculateY())
-#print(np.random.standard_normal(10))

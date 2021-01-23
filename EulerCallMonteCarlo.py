@@ -26,6 +26,5 @@ class EulerCallMonteCarlo:
         return C
 
 
-
-euroCall = EulerCallMonteCarlo(100,120,1,0.2,0.5,100,1000).price()
-print("European Call price: {:.2f}".format(euroCall))
+euroCallEuler = EulerCallMonteCarlo(100,120,1,0.2,0.5,100,1000).price()
+print("European Call Price Euler Method: {:.2f}".format(euroCallEuler))
